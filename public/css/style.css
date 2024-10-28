@@ -15,6 +15,7 @@ body{
     color:#222222 !important;
 }
 /*Footer*/
+
 .f-info-links a{
     text-decoration: none;
     color: #222222;
@@ -39,17 +40,19 @@ text-decoration: underline;
     background-color:grey;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: evenly;
     text-align: center;
 }
 /*cards*/
+.card{
+    border: 2px;
+    margin-bottom: 2rem;
+}
 .listing-card{
     border: none !important;
     margin-bottom: 2rem;
-
 }
 .card-img-top{
-    border-radius: 1rem;
+    border-radius: 1rem !important;
     width:100% !important;
     object-fit:cover !important;
 }
@@ -63,6 +66,9 @@ text-decoration: underline;
     text-decoration: none;
 }
 /*Card Effect*/
+.card-img-overlay{
+    opacity: 0;
+}
 .card-img-overlay:hover{
     opacity:0.2;
     background-color: white;
