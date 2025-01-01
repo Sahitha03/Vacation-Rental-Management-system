@@ -1,0 +1,180 @@
+body{
+  font-family:"Plus Jakarta Sans",sans-serif !important;
+}
+
+.navbar
+{
+  height:5rem;
+  background-color: white;
+}
+.fa-compass{
+  color:#fe424d;
+  font-size: 2rem;
+}
+.nav-link{
+  color:#222222 !important;
+}
+/*Footer*/
+
+.f-info-links a{
+  text-decoration: none;
+  color: #222222;
+}
+.f-info-links a:hover{
+text-decoration: underline;
+}
+.f-info-links,.f-info-socials,f-info-brand{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.f-info-socials i{
+  font-size: 1.2rem;
+  margin-right: 1rem;
+}
+
+.f-info{
+  display: flex;
+  height:8rem;
+  background-color:grey;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+/*cards*/
+.card{
+  border: 2px;
+  margin-bottom: 2rem;
+}
+.listing-card{
+  border: none !important;
+  margin-bottom: 2rem;
+}
+.card-img-top{
+  border-radius: 1rem !important;
+  object-fit:cover !important;
+}
+.card-body{
+  padding:0 !important;
+}
+.card-text{
+  font-weight:400;
+}
+.listing-link{
+  text-decoration: none;
+}
+
+/*Card Effect*/
+.card-img-overlay{
+  opacity: 0;
+}
+.card-img-overlay:hover{
+  opacity:0.2;
+  background-color: white;
+}
+/*New Page*/
+.add-btn{
+  background-color:#fe424d !important;
+  border: none !important;
+}
+/*Show Image*/
+.show-img{
+  height:30vh;
+}
+
+.btns{
+  display: flex;   
+}
+.show-card{
+  padding-left:0;
+  
+}
+.flex-container {
+  display: flex; /* Enables Flexbox layout */
+  gap: 5px; /* Optional: Space between the two divs */
+}
+
+.side-by-side-item {
+  flex: 1; /* Ensures the divs share the available space equally */
+  background-color:white; /* Optional: For better visualization */
+   /* Optional: Adds padding inside the div */
+}
+.mainimg{
+  width:450px;
+  height:292px;
+}
+.fimg{
+  width:350px;
+  height:300px;
+}
+.grid-container {
+  display: grid; /* Enables grid layout */
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+  grid-template-rows: repeat(2, auto); /* Creates 2 rows with height adjusted to content */
+  gap: 5px; /* Adds spacing between grid items */
+}
+
+.grid-item {
+  width:250px;
+  height:141px;
+  padding: 5px; /* Optional: Adds padding inside each grid item */
+  text-align: center; /* Centers text horizontally */
+  border: 1px solid white; /* Optional: Adds a border for clarity */
+}
+
+<style>
+/* Initially hide the carousel controls */
+.carousel-control-prev,
+.carousel-control-next {
+  visibility: hidden; /* Make them completely hidden */
+  position: absolute; /* Ensure the controls are positioned correctly */
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1; /* Make sure controls are above the carousel images */
+}
+
+/* Show controls when hovering over the carousel */
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+  visibility: visible; /* Make them visible when hovering */
+}
+
+/* Styling for control icons (arrows inside circles) */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent dark circle */
+  border-radius: 50%; /* Circular controls */
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Arrow color inside the circle */
+.carousel-control-prev-icon::after,
+.carousel-control-next-icon::after {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  color: #fff; /* White color for arrows */
+  font-size: 18px; /* Adjust arrow size */
+}
+
+/* Left arrow */
+.carousel-control-prev-icon::after {
+  content: '\f104'; /* Left arrow icon (Font Awesome) */
+}
+
+/* Right arrow */
+.carousel-control-next-icon::after {
+  content: '\f105'; /* Right arrow icon (Font Awesome) */
+}
+
+/* Optional: Increase visibility on hover */
+.carousel-control-prev:hover .carousel-control-prev-icon,
+.carousel-control-next:hover .carousel-control-next-icon {
+  background-color: rgba(0, 0, 0, 0.8); /* Darker circle on hover */
+}
+

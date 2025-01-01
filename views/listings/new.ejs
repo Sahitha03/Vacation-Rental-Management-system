@@ -3,23 +3,40 @@
   <div class="row">
     <div class="col-8 offset-2">
       <h3>Create New Listing</h3>
-      <form method="POST" action="/listings" class="needs-validation" novalidate>
+      <form method="POST" action="/listings" enctype="multipart/form-data" class="needs-validation" novalidate>
+          <!-- Title -->
           <div class="mb-3">
               <label for="title" class="form-label">Title</label>
               <input type="text" name="listing[title]" id="title" class="form-control" required>
               <div class="valid-feedback">Valid title</div>
               <div class="invalid-feedback">Give valid title</div>
           </div>
+
+          <!-- Description -->
           <div class="mb-3">
               <label for="description" class="form-label">Description</label>
               <textarea name="listing[description]" id="description" class="form-control" required></textarea>
               <div class="valid-feedback">Valid description</div>
               <div class="invalid-feedback">Give valid description</div>
           </div>
+
+          <!-- Image Upload -->
           <div class="mb-3">
-            <label for="image" class="form-label">Image Link</label>
-            <input name="listing[image]" placeholder="Enter image URL/Link" type="text" class="form-control">
+            <label for="image" class="form-label">Upload listing image</label>
+            <input name="listing[images][]" type="file" class="form-control" required>
+            <div class="invalid-feedback">Please upload a primary image</div>
           </div>
+
+          <!-- Additional Image Uploads -->
+          <div class="mb-3">
+            <label for="imageadd" class="form-label">Upload Additional listing images</label>
+            <input name="listing[images][]" type="file" class="form-control">
+            <input name="listing[images][]" type="file" class="form-control">
+            <input name="listing[images][]" type="file" class="form-control">
+            <input name="listing[images][]" type="file" class="form-control">
+          </div>
+
+          <!-- Price and Location -->
           <div class="row">
               <div class="mb-3 col-md-4">
                   <label for="price" class="form-label">Price</label>
@@ -33,12 +50,16 @@
                   <div class="invalid-feedback">Give valid location</div>
               </div>
           </div>
+
+          <!-- Country -->
           <div class="mb-3">
               <label for="country" class="form-label">Country</label>
               <input type="text" name="listing[country]" id="country" class="form-control" required>
               <div class="valid-feedback">Valid country name</div>
               <div class="invalid-feedback">Give valid country name</div>
           </div>
+
+          <!-- Submit Button -->
           <button class="btn btn-dark add-btn">Add</button>
       </form>
     </div>

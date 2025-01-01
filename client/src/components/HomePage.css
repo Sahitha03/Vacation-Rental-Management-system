@@ -1,0 +1,103 @@
+body{
+    font-family:"Plus Jakarta Sans",sans-serif !important;
+}
+
+/* Cards */
+.card{
+    border: 2px;
+    margin-bottom: 2rem;
+}
+.listing-card{
+    border: none !important;
+    margin-bottom: 2rem;
+}
+.card-img-top{
+    border-radius: 1rem !important;
+    object-fit:cover !important;
+}
+.card-body{
+    padding:0 !important;
+}
+.card-text{
+    font-weight:400;
+}
+.listing-link{
+    text-decoration: none;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+}
+.card-img-overlay:hover{
+    opacity:0.2;
+    background-color: white;
+}
+
+/* New Page */
+.show-img{
+    height:30vh;
+}
+
+.btns{
+    display: flex;   
+}
+
+/* Carousel Controls */
+.carousel-control-prev,
+.carousel-control-next {
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 1;
+   width: 40px;
+   height: 40px;
+   background-color: #fff; /* White circle */
+   border-radius: 50%; /* Make it circular */
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none; /* No border */
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for better visibility */
+   cursor: pointer;
+}
+
+/* Keep the controls hidden by default and show on hover */
+.carousel-control-prev,
+.carousel-control-next {
+   visibility: hidden;
+}
+
+.carousel:hover .carousel-control-prev,
+.carousel:hover .carousel-control-next {
+   visibility: visible;
+}
+
+/* Arrow inside the circle */
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+   background-image: none; /* Remove default Bootstrap arrow */
+   font-family: "Font Awesome 5 Free"; /* Ensure Font Awesome is included */
+   font-weight: 900;
+   font-size: 18px;
+   color: #000; /* Arrow color */
+}
+
+.carousel-control-prev-icon::after {
+   content: '\f104'; /* Unicode for Font Awesome left arrow */
+}
+
+.carousel-control-next-icon::after {
+   content: '\f105'; /* Unicode for Font Awesome right arrow */
+}
+
+/* Prevent appearance changes on focus or active states */
+.carousel-control-prev:focus,
+.carousel-control-next:focus,
+.carousel-control-prev:active,
+.carousel-control-next:active {
+   outline: none; /* Remove focus outline */
+   background-color: #fff; /* Keep the white circle */
+   color: #000; /* Keep arrow black */
+   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Ensure shadow consistency */
+}
